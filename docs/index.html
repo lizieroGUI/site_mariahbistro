@@ -147,15 +147,15 @@ section{ scroll-margin-top: 90px; }
 .historia-copy h2{ font-size:var(--fs-h2); margin-top:14px; }
 .historia-copy p{ margin-top:20px; max-width:52ch; opacity:.82; }
 .historia-photo{ aspect-ratio:1/1; overflow:hidden; }
-.historia-points{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:30px; }
-.historia-point{ border-top:1px solid rgba(39,35,31,.18); padding-top:16px; }
-.historia-point strong{ display:block; font-family:var(--serif); font-size:1.2rem; font-weight:400; }
-.historia-point span{ display:block; margin-top:6px; font-size:.9rem; opacity:.7; }
+.fundadores{ display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-top:30px; }
+.fundador{ border-top:1px solid rgba(39,35,31,.18); padding-top:18px; }
+.fundador h3{ font-size:1.45rem; }
+.fundador p{ margin-top:10px; font-size:.94rem; opacity:.76; }
 @media(max-width:900px){
   .historia-grid{ grid-template-columns:1fr; gap:38px; }
 }
 @media(max-width:560px){
-  .historia-points{ grid-template-columns:1fr; }
+  .fundadores{ grid-template-columns:1fr; }
 }
 
 .station-badge{
@@ -266,7 +266,11 @@ section{ scroll-margin-top: 90px; }
   padding:calc(var(--header-h) + 40px) 28px 110px;
   max-width:var(--maxw); margin:0 auto;
 }
-.hero-eyebrow{ color:var(--gold); margin-bottom:22px; }
+.hero-eyebrow{
+  color:var(--cream); margin-bottom:22px; padding:8px 12px;
+  background:rgba(23,23,20,.72); border:1px solid rgba(245,240,231,.35);
+  border-radius:2px; text-shadow:0 1px 3px rgba(0,0,0,.55);
+}
 .hero h1{
   color:var(--cream); font-size:var(--fs-hero); max-width:14ch; letter-spacing:-0.01em;
 }
@@ -391,33 +395,6 @@ section{ scroll-margin-top: 90px; }
 }
 
 /* ============================================================
-   AMBIENTE
-   ============================================================ */
-.ambiente-head{ max-width:640px; margin-bottom:50px; }
-.ambiente-head h2{ font-size:var(--fs-h2); margin-top:14px; }
-.ambiente-head p{ margin-top:18px; opacity:.78; max-width:52ch; }
-.ambiente-hero-photo .photo-ratio{ aspect-ratio:16/8; }
-.ambiente-gallery{
-  display:grid; grid-template-columns:repeat(6,1fr); gap:18px; margin-top:22px;
-}
-.ambiente-gallery .photo-ratio{ aspect-ratio:1/1; }
-.ag-1{ grid-column:span 3; grid-row:span 2; }
-.ag-1 .photo-ratio{ aspect-ratio:1/1.05; height:100%; }
-.ag-2{ grid-column:span 3; }
-.ag-3{ grid-column:span 3; }
-.ag-4{ grid-column:span 2; }
-.ag-5{ grid-column:span 2; }
-.ag-6{ grid-column:span 2; }
-.ambiente-cta{ text-align:center; margin-top:54px; }
-
-@media(max-width:900px){
-  .ambiente-gallery{ grid-template-columns:repeat(2,1fr); }
-  .ag-1{ grid-column:span 2; grid-row:auto; }
-  .ag-1 .photo-ratio{ aspect-ratio:16/10; }
-  .ag-2,.ag-3,.ag-4,.ag-5,.ag-6{ grid-column:span 1; }
-}
-
-/* ============================================================
    DIFERENCIAIS
    ============================================================ */
 .dif-grid{
@@ -436,25 +413,6 @@ section{ scroll-margin-top: 90px; }
 @media(max-width:900px){
   .dif-grid{ grid-template-columns:1fr; }
   .dif-item{ padding:28px; }
-}
-
-/* ============================================================
-   SEÇÃO EMOCIONAL
-   ============================================================ */
-.emocional{ display:grid; grid-template-columns:1fr 1fr; align-items:stretch; min-height:640px; }
-.emocional-media .photo-ratio{ height:100%; aspect-ratio:auto; }
-.emocional-media{ position:relative; }
-.emocional-text{
-  display:flex; flex-direction:column; justify-content:center; padding:80px 70px;
-}
-.emocional-text h2{ font-size:var(--fs-h2); }
-.emocional-text p{ margin-top:24px; opacity:.82; max-width:42ch; }
-.emocional-text .btn{ margin-top:32px; align-self:flex-start; }
-
-@media(max-width:900px){
-  .emocional{ grid-template-columns:1fr; min-height:0; }
-  .emocional-media .photo-ratio{ aspect-ratio:16/11; height:auto; }
-  .emocional-text{ padding:56px 26px; }
 }
 
 /* ============================================================
@@ -492,41 +450,6 @@ section{ scroll-margin-top: 90px; }
 .review-dots{ display:flex; gap:8px; }
 .review-dot{ width:7px; height:7px; border-radius:50%; background:rgba(39,35,31,0.25); border:none; padding:0; transition:background .3s var(--ease); }
 .review-dot.active{ background:var(--terracotta); }
-
-/* ============================================================
-   INSTAGRAM
-   ============================================================ */
-.insta-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-bottom:44px; }
-.insta-head h2{ font-size:var(--fs-h2); margin-top:14px; }
-.insta-head p{ margin-top:14px; opacity:.72; max-width:40ch; }
-.insta-grid{ display:grid; grid-template-columns:repeat(6,1fr); grid-auto-rows:150px; gap:14px; }
-.insta-item{ overflow:hidden; }
-.insta-item .photo{ width:100%; height:100%; border-radius:0; }
-.i-1{ grid-column:span 2; grid-row:span 2; }
-.i-2{ grid-column:span 2; }
-.i-3{ grid-column:span 2; }
-.i-4{ grid-column:span 2; }
-.i-5{ grid-column:span 2; grid-row:span 2; }
-.i-6{ grid-column:span 2; }
-.i-7{ grid-column:span 3; }
-.i-8{ grid-column:span 3; }
-
-@media(max-width:900px){
-  .insta-grid{ grid-template-columns:repeat(2,1fr); grid-auto-rows:130px; }
-  .i-1,.i-2,.i-3,.i-4,.i-5,.i-6,.i-7,.i-8{ grid-column:span 1; grid-row:span 1; }
-  .i-1,.i-5{ grid-column:span 2; grid-row:span 1; }
-}
-
-/* ============================================================
-   RESERVA / WHATSAPP (banner conversão)
-   ============================================================ */
-.reservar{ position:relative; min-height:560px; display:flex; align-items:center; overflow:hidden; }
-.reservar-photo{ position:absolute; inset:0; z-index:0; }
-.reservar-overlay{ position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(23,23,20,0.72), rgba(23,23,20,0.55)); }
-.reservar-content{ position:relative; z-index:2; text-align:center; max-width:640px; margin:0 auto; padding:90px 28px; }
-.reservar-content h2{ color:var(--cream); font-size:var(--fs-h2); margin-top:16px; }
-.reservar-content p{ color:var(--cream); opacity:.85; margin-top:20px; font-size:var(--fs-lead); }
-.reservar-content .btn{ margin-top:34px; }
 
 /* ============================================================
    LOCALIZAÇÃO
@@ -665,7 +588,6 @@ section{ scroll-margin-top: 90px; }
       <a href="#sobre">O Mariah</a>
       <a href="#gastronomia">Gastronomia</a>
       <a href="#cardapio">Cardápio</a>
-      <a href="#ambiente">Ambiente</a>
       <a href="#avaliacoes">Avaliações</a>
       <a href="#localizacao">Localização</a>
     </nav>
@@ -690,7 +612,6 @@ section{ scroll-margin-top: 90px; }
     <a href="#sobre" class="mm-link">O Mariah</a>
     <a href="#gastronomia" class="mm-link">Gastronomia</a>
     <a href="#cardapio" class="mm-link">Cardápio</a>
-    <a href="#ambiente" class="mm-link">Ambiente</a>
     <a href="#avaliacoes" class="mm-link">Avaliações</a>
     <a href="#localizacao" class="mm-link">Contato</a>
   </nav>
@@ -759,13 +680,18 @@ section{ scroll-margin-top: 90px; }
         <img src="assets/SaveClip.App_494440211_18064231565512480_3533794713149263809_n.webp" alt="Pessoas que fazem parte da história do Mariah Bistrô" width="1080" height="1080" loading="lazy">
       </div>
       <div class="historia-copy reveal">
-        <span class="label label--light">Chef, história e proposta</span>
-        <h2>Uma cozinha com presença e propósito.</h2>
-        <p>À frente de cada serviço está uma cozinha atenta ao ponto, ao equilíbrio e à apresentação. O trabalho do chef aparece no cuidado com os ingredientes e na combinação de referências familiares com uma leitura própria.</p>
-        <p>A história do Mariah se constrói ao redor da mesa: receber bem, cozinhar com capricho e criar um lugar onde cada visita possa virar uma boa lembrança.</p>
-        <div class="historia-points">
-          <div class="historia-point"><strong>Ingredientes</strong><span>Escolhidos para valorizar sabor e textura.</span></div>
-          <div class="historia-point"><strong>Hospitalidade</strong><span>Atendimento próximo e ambiente acolhedor.</span></div>
+        <span class="label label--light">Sobre nós</span>
+        <h2>Adriano e Mariah.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="fundadores">
+          <article class="fundador">
+            <h3>Adriano</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae nibh sed justo fermentum commodo.</p>
+          </article>
+          <article class="fundador">
+            <h3>Mariah</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae nibh sed justo fermentum commodo.</p>
+          </article>
         </div>
       </div>
     </div>
@@ -795,7 +721,7 @@ section{ scroll-margin-top: 90px; }
 
       <div class="pilar reveal">
         <div class="photo-ratio">
-          <div class="photo photo--image"><img src="assets/SaveClip.App_625157492_18106868587690161_4491509099600501146_n.webp" alt="Prato de carne com molho e acompanhamento" width="1080" height="1080" loading="lazy"></div>
+          <div class="photo photo--image"><img src="assets/ingredientes-frescos.jpg" alt="Ingredientes frescos selecionados para a cozinha do Mariah" width="1402" height="1122" loading="lazy"></div>
         </div>
         <div>
           <span class="pilar-num">02 — Ingredientes</span>
@@ -806,7 +732,7 @@ section{ scroll-margin-top: 90px; }
 
       <div class="pilar reveal">
         <div class="photo-ratio">
-          <div class="photo photo--image"><img src="assets/SaveClip.App_582609594_18087072152512480_2546655398278121649_n.jpg" alt="Prato de peixe preparado pelo Mariah" width="1440" height="1800" loading="lazy"></div>
+          <div class="photo photo--image"><img src="assets/preparo-carne.jpg" alt="Carne sendo preparada na frigideira" width="1025" height="1020" loading="lazy"></div>
         </div>
         <div>
           <span class="pilar-num">03 — Preparo</span>
@@ -817,7 +743,7 @@ section{ scroll-margin-top: 90px; }
 
       <div class="pilar reveal">
         <div class="photo-ratio">
-          <div class="photo photo--image"><img src="assets/SaveClip.App_536985098_18076410149512480_3417410498847107040_n.jpg" alt="Seleção de vinhos do Mariah Bistrô" width="1440" height="1440" loading="lazy"></div>
+          <div class="photo photo--image"><img src="assets/celebracao-mariah.jpg" alt="Celebração intimista ao redor da mesa" width="1402" height="1122" loading="lazy"></div>
         </div>
         <div>
           <span class="pilar-num">04 — Experiência</span>
@@ -892,38 +818,6 @@ section{ scroll-margin-top: 90px; }
   </section>
 
   <!-- ============================================================
-       AMBIENTE
-       ============================================================ -->
-  <section class="section bg-ivory" id="ambiente">
-    <div class="container">
-      <div class="ambiente-head reveal">
-        <span class="label label--light">Nosso espaço</span>
-        <h2>Um lugar para<br>aproveitar sem pressa.</h2>
-        <p>Um ambiente sereno, confortável e acolhedor. O Mariah foi pensado para proporcionar momentos tranquilos, seja em um jantar especial, um encontro entre amigos ou uma refeição em família. Um espaço onde boa gastronomia e conforto caminham juntos.</p>
-      </div>
-
-      <div class="ambiente-hero-photo reveal">
-        <div class="photo-ratio" style="aspect-ratio:16/8;">
-          <div class="photo photo--image"><img src="assets/SaveClip.App_625157492_18106868587690161_4491509099600501146_n.webp" alt="Prato servido no Mariah Bistrô" width="1080" height="1080" loading="lazy"></div>
-        </div>
-      </div>
-
-      <div class="ambiente-gallery reveal">
-        <div class="ag-1 photo-ratio"><div class="photo photo--image"><img src="assets/SaveClip.App_505479604_18068655848512480_4748998646628800321_n.webp" alt="Prato de carne suculenta do Mariah" width="1080" height="1080" loading="lazy"></div></div>
-        <div class="ag-2 photo-ratio"><div class="photo photo--image"><img src="assets/SaveClip.App_538598256_18076410176512480_5928561652638841109_n.jpg" alt="Detalhe de prato preparado na casa" width="1440" height="1440" loading="lazy"></div></div>
-        <div class="ag-3 photo-ratio"><div class="photo photo--image"><img src="assets/SaveClip.App_582609594_18087072152512480_2546655398278121649_n.jpg" alt="Peixe servido com arroz" width="1440" height="1800" loading="lazy"></div></div>
-        <div class="ag-4 photo-ratio"><div class="photo photo--image"><img src="assets/SaveClip.App_536985098_18076410149512480_3417410498847107040_n.jpg" alt="Vinhos selecionados pelo Mariah" width="1440" height="1440" loading="lazy"></div></div>
-        <div class="ag-5 photo-ratio"><div class="photo photo--image"><img src="assets/SaveClip.App_571377135_18084331211512480_3594683115531614405_n.jpg" alt="Bebida com frutas" width="864" height="1152" loading="lazy"></div></div>
-        <div class="ag-6 photo-ratio"><div class="photo photo--image"><img src="assets/SaveClip.App_729815242_18113111897512480_8218287038304862222_n.webp" alt="Polvo com arroz e batatas" width="1080" height="1080" loading="lazy"></div></div>
-      </div>
-
-      <div class="ambiente-cta reveal">
-        <a href="https://wa.me/5511963795373" class="btn btn-primary wa-link" data-msg="reservar" target="_blank" rel="noopener">Reservar uma mesa</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
        DIFERENCIAIS
        ============================================================ -->
   <section class="section bg-olive" id="diferenciais">
@@ -953,22 +847,6 @@ section{ scroll-margin-top: 90px; }
           <h3>Experiência sem excessos</h3>
           <p>Uma proposta gastronômica que valoriza sabor, apresentação e hospitalidade sem perder a simplicidade.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       SEÇÃO EMOCIONAL
-       ============================================================ -->
-  <section class="bg-charcoal" id="experiencia">
-    <div class="emocional">
-      <div class="emocional-media reveal">
-        <div class="photo-ratio" style="height:100%;"><div class="photo photo--image" style="height:100%;"><img src="assets/SaveClip.App_536985098_18076410149512480_3417410498847107040_n.jpg" alt="Vinhos para acompanhar a experiência no Mariah" width="1440" height="1440" loading="lazy"></div></div>
-      </div>
-      <div class="emocional-text reveal">
-        <h2>Existem refeições rápidas.<br>E existem momentos que merecem ser apreciados.</h2>
-        <p>O Mariah foi pensado para esses momentos. Um ambiente sereno, uma mesa bem preparada e uma cozinha feita para quem valoriza ingredientes, sabores e experiências de qualidade.</p>
-        <a href="https://wa.me/5511963795373" class="btn btn-outline-light wa-link" data-msg="reservar" target="_blank" rel="noopener">Reservar uma mesa</a>
       </div>
     </div>
   </section>
@@ -1032,47 +910,6 @@ section{ scroll-margin-top: 90px; }
   </section>
 
   <!-- ============================================================
-       INSTAGRAM
-       ============================================================ -->
-  <section class="section bg-charcoal" id="instagram">
-    <div class="container">
-      <div class="insta-head reveal">
-        <div>
-          <span class="label label--dark">Galeria Mariah</span>
-          <h2>Momentos do Mariah.</h2>
-          <p>Acompanhe nossos pratos, novidades e momentos também pelo Instagram.</p>
-        </div>
-      </div>
-      <div class="insta-grid reveal">
-        <div class="insta-item i-1 photo photo--image"><img src="assets/SaveClip.App_610625954_18092310890512480_3326612552942606862_n.jpg" alt="Prato colorido do Mariah" loading="lazy"></div>
-        <div class="insta-item i-2 photo photo--image"><img src="assets/SaveClip.App_571377135_18084331211512480_3594683115531614405_n.jpg" alt="Bebida fresca" loading="lazy"></div>
-        <div class="insta-item i-3 photo photo--image"><img src="assets/SaveClip.App_497620509_18065493050512480_4574824959173595766_n.webp" alt="Carne com acompanhamento" loading="lazy"></div>
-        <div class="insta-item i-4 photo photo--image"><img src="assets/SaveClip.App_621267487_18093732452512480_7980634418014838611_n.webp" alt="Receita com arroz e carne" loading="lazy"></div>
-        <div class="insta-item i-5 photo photo--image"><img src="assets/SaveClip.App_729815242_18113111897512480_8218287038304862222_n.webp" alt="Polvo servido com acompanhamentos" loading="lazy"></div>
-        <div class="insta-item i-6 photo photo--image"><img src="assets/SaveClip.App_536985098_18076410149512480_3417410498847107040_n.jpg" alt="Vinhos do Mariah" loading="lazy"></div>
-        <div class="insta-item i-7 photo photo--image"><img src="assets/SaveClip.App_558160432_18081504854512480_860821009800776107_n.jpg" alt="Prato com risoto" loading="lazy"></div>
-        <div class="insta-item i-8 photo photo--image"><img src="assets/SaveClip.App_625157492_18106868587690161_4491509099600501146_n.webp" alt="Prato de carne e molho" loading="lazy"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       RESERVA / WHATSAPP
-       ============================================================ -->
-  <section class="reservar" id="reservar">
-    <div class="reservar-photo">
-      <div class="photo photo--image" style="position:absolute;inset:0;"><img src="assets/SaveClip.App_759824343_18118216742512480_1397243934267106701_n.jpg" alt="Prato servido no Mariah Bistrô" width="1600" height="2133" loading="lazy"></div>
-    </div>
-    <div class="reservar-overlay"></div>
-    <div class="reservar-content reveal">
-      <span class="label label--dark">Reservas</span>
-      <h2>Sua mesa está esperando.</h2>
-      <p>Quer conhecer o Mariah Bistrô? Entre em contato conosco pelo WhatsApp para consultar disponibilidade, tirar dúvidas ou fazer sua reserva.</p>
-      <a href="https://wa.me/5511963795373" class="btn btn-primary wa-link" data-msg="reservar" target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
-    </div>
-  </section>
-
-  <!-- ============================================================
        LOCALIZAÇÃO E HORÁRIOS
        ============================================================ -->
   <section class="bg-ivory" id="localizacao">
@@ -1105,6 +942,24 @@ section{ scroll-margin-top: 90px; }
           <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Dr.+Armando+Pinto,+55,+Caieiras,+SP" class="btn btn-outline-dark" target="_blank" rel="noopener">Traçar rota</a>
           <a href="https://wa.me/5511963795373" class="btn btn-primary wa-link" data-msg="hero" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA FINAL
+       ============================================================ -->
+  <section class="cta-final bg-charcoal" id="cta-final">
+    <div class="cta-final-photo">
+      <div class="photo photo--image" style="position:absolute;inset:0;"><img src="assets/SaveClip.App_625157492_18106868587690161_4491509099600501146_n.webp" alt="Mariah Bistrô ao anoitecer" width="1080" height="1080" loading="lazy"></div>
+    </div>
+    <div class="cta-final-overlay"></div>
+    <div class="cta-final-content reveal">
+      <h2>Boa gastronomia merece ser apreciada.</h2>
+      <p>Ingredientes bem escolhidos, sabores inspirados na tradição e um ambiente preparado para receber você com tranquilidade. Esperamos você no Mariah Bistrô.</p>
+      <div class="cta-final-ctas">
+        <a href="https://wa.me/5511963795373" class="btn btn-primary wa-link" data-msg="reservar" target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
+        <a href="#cardapio" class="btn btn-outline-light">Conhecer o cardápio</a>
       </div>
     </div>
   </section>
@@ -1149,24 +1004,6 @@ section{ scroll-margin-top: 90px; }
             <div class="faq-answer-wrap"><div class="faq-answer"><p>Sim. Você pode falar diretamente conosco pelo WhatsApp para esclarecer dúvidas sobre cardápio, horários, reservas ou atendimento.</p></div></div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       CTA FINAL
-       ============================================================ -->
-  <section class="cta-final bg-charcoal" id="cta-final">
-    <div class="cta-final-photo">
-      <div class="photo photo--image" style="position:absolute;inset:0;"><img src="assets/SaveClip.App_625157492_18106868587690161_4491509099600501146_n.webp" alt="Mariah Bistrô ao anoitecer" width="1080" height="1080" loading="lazy"></div>
-    </div>
-    <div class="cta-final-overlay"></div>
-    <div class="cta-final-content reveal">
-      <h2>Boa gastronomia merece ser apreciada.</h2>
-      <p>Ingredientes bem escolhidos, sabores inspirados na tradição e um ambiente preparado para receber você com tranquilidade. Esperamos você no Mariah Bistrô.</p>
-      <div class="cta-final-ctas">
-        <a href="https://wa.me/5511963795373" class="btn btn-primary wa-link" data-msg="reservar" target="_blank" rel="noopener">Reservar pelo WhatsApp</a>
-        <a href="#cardapio" class="btn btn-outline-light">Conhecer o cardápio</a>
       </div>
     </div>
   </section>
